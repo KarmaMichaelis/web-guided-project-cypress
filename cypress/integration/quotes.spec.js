@@ -62,7 +62,11 @@ describe('Creation of new quote', () => {
 
     // THE REAL CHECKS COME NOW
     // 1- inputs clear themselves
+    cy.get('input[name=text]').should('be.empty')
+    cy.get('input[name=author]').should('be.empty')
     // 2- the new quote shows on the page
+    // a different way of grabbing elements... BY THEIR CONTENT
+    cy.contains('new quote (jessica)')
 
     // CLEAN UP
     // delete the new post we just created
