@@ -45,3 +45,20 @@ describe('Inputs and cancel button', () => { // grouping several tests that are 
     cy.get('button#submitBtn').should('be.disabled')
   })
 })
+
+describe('Creation of new quote', () => {
+  it('can navigate to the site', () => { // this is the test
+    cy.visit('http://localhost:1234')
+  })
+
+  it('can add a new quote', () => {
+    // SET UP FOR THE TEST
+    // type text
+    // type auther
+    // find the submit button and click it
+
+    // THE REAL CHECKS COME NOW
+    // 1- inputs clear themselves
+    // 2- the new quote shows on the page
+  })
+})
