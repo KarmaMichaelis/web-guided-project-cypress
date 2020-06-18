@@ -40,5 +40,8 @@ describe('Inputs and submit button', () => { // grouping several tests that are 
     // assertions:
     // 1- both inputs should go back to empty
     // 2- the submit button should go back to disabled
+    cy.get('input[name=text]').should('be.empty')
+    cy.get('input[name=author]').should('be.empty')
+    cy.get('button#submitBtn').should('be.disabled')
   })
 })
