@@ -27,4 +27,8 @@ describe('Inputs and submit button', () => { // grouping several tests that are 
       .type('An author')
       .should('have.value', 'An author')
   })
+
+  it('the submit button should BE ENABLED NOW!', () => {
+    cy.get('button#submitBtn').should('not.be.disabled')
+  })
 })
