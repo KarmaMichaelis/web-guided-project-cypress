@@ -7,4 +7,8 @@ describe('Inputs and submit button', () => { // grouping several tests that are 
     // assertion
     cy.url().should('include', 'localhost')
   })
+
+  it('submit button should be disabled', () => { // second test
+    cy.get('button#submitBtn').should('be.disabled')
+  })
 })
