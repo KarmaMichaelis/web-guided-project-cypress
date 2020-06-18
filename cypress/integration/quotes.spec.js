@@ -56,9 +56,15 @@ describe('Creation of new quote', () => {
     // type text
     // type auther
     // find the submit button and click it
+    cy.get('input[name=text]').type('new quote')
+    cy.get('input[name=author]').type('jessica')
+    cy.get('button#submitBtn').click()
 
     // THE REAL CHECKS COME NOW
     // 1- inputs clear themselves
     // 2- the new quote shows on the page
+
+    // CLEAN UP
+    // delete the new post we just created
   })
 })
