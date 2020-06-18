@@ -15,5 +15,6 @@ describe('Inputs and submit button', () => { // grouping several tests that are 
   it('can type a text for a new quote', () => {
     cy.get('input[name=text]')
       .type('Lady Gaga')
+      .should('have.value', 'Lady Gaga')
   })
 })
