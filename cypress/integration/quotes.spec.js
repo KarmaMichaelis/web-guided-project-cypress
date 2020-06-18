@@ -67,8 +67,11 @@ describe('Creation of new quote', () => {
     // 2- the new quote shows on the page
     // a different way of grabbing elements... BY THEIR CONTENT
     cy.contains('new quote (jessica)')
+  })
 
-    // CLEAN UP
-    // delete the new post we just created
+  it('can delete the newly created quote', () => {
+    cy.contains('new quote (jessica)')
+      .siblings('button:nth-of-type(2)')
+      .click()
   })
 })
