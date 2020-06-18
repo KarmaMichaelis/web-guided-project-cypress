@@ -32,7 +32,7 @@ describe('Inputs and submit button', () => { // grouping several tests that are 
     cy.get('button#submitBtn').should('not.be.disabled')
   })
 
-  it('can cancel the new quote', () => {
+  it('can cancel the new quote', () => { // individual test
     // remote control operation
     cy.get('button#cancelBtn').click()
 
