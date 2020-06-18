@@ -11,4 +11,9 @@ describe('Inputs and submit button', () => { // grouping several tests that are 
   it('submit button should be disabled', () => { // second test
     cy.get('button#submitBtn').should('be.disabled')
   })
+
+  it('can type a text for a new quote', () => {
+    cy.get('input[name=text]')
+      .type('Lady Gaga')
+  })
 })
