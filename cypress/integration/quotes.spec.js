@@ -34,6 +34,7 @@ describe('Inputs and submit button', () => { // grouping several tests that are 
 
   it('can cancel the new quote', () => { // individual test
     // remote control operation
+    // (but also checks that the button exists, otherwise test fails)
     cy.get('button#cancelBtn').click()
 
     // assertions:
