@@ -70,8 +70,12 @@ describe('Creation of new quote', () => {
   })
 
   it('can delete the newly created quote', () => {
-    cy.contains('new quote (jessica)')
-      .siblings('button:nth-of-type(2)')
+    // action 
+    cy.contains('new quote (jessica)') // if this quote is not there -> fail
+      .siblings('button:nth-of-type(2)') // if this sibling not there -> fail
       .click()
+    
+    // assert that the quote is gone
+    cy.contains('new quote (jessica)').should('not.exist')
   })
 })
