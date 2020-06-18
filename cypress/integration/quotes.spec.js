@@ -5,6 +5,6 @@ describe('Inputs and submit button', () => { // grouping several tests that are 
     cy.visit('http://localhost:1234')
 
     // assertion
-    cy.url().should('include', 'http://localhost:1234')
+    cy.url().should('include', 'localhost')
   })
 })
